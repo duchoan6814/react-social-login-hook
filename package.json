@@ -1,0 +1,29 @@
+{
+  "name": "social-login-hook",
+  "version": "1.0.0",
+  "description": "social-login-hook is a package that provides an easy-to-use React hook for implementing social login functionality in your application. The hook allows users to sign in with their Google, Apple, or Facebook accounts, providing a streamlined and secure authentication process.",
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "author": "hoantruong",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@types/react": "^17.0.34",
+    "react": "^17.0.2",
+    "rollup": "^2.60.0",
+    "rollup-plugin-dts": "^4.0.1",
+    "typescript": "^4.4.4"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "tslib": "^2.5.0"
+  }
+}
