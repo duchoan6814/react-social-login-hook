@@ -34,7 +34,7 @@ export const loadScript = (
   const element = d.getElementsByTagName(s)[0];
   const fjs = element;
   let js = element as HTMLScriptElement;
-  js = d.createElement(s);
+  js = d.createElement(s) as HTMLScriptElement;
   js.id = id;
   js.src = jsSrc;
   if (fjs && fjs.parentNode) {
@@ -42,7 +42,7 @@ export const loadScript = (
   } else {
     d.head.appendChild(js);
   }
-  js.onerror = onError;
+  js.onerror = onError as (event: Event | string) => void;
   js.onload = cb;
 };
 

@@ -1,28 +1,5 @@
 import { useState, useEffect } from "react";
-import { loadScript, removeScript } from "../lib/helper";
-
-interface UseGoogleLoginParams {
-  onSuccess?: (res: any) => void;
-  onAutoLoadFinished?: (signedIn: boolean) => void;
-  onFailure?: (err: any) => void;
-  onRequest?: () => void;
-  onScriptLoadFailure?: (err: any) => void;
-  clientId: string;
-  cookiePolicy?: string;
-  loginHint?: string;
-  hostedDomain?: string;
-  autoLoad?: boolean;
-  isSignedIn?: boolean;
-  fetchBasicProfile?: boolean;
-  redirectUri?: string;
-  discoveryDocs?: string[];
-  uxMode?: string;
-  scope?: string;
-  accessType?: string;
-  responseType?: string;
-  jsSrc?: string;
-  prompt?: string;
-}
+import { loadScript, removeScript } from "../../lib/helper";
 
 /**
 
@@ -51,7 +28,7 @@ Hook to implement Google Authentication
 @returns {Object} - An object containing the click function to initiate authentication and a loaded flag indicating if the Google API has been loaded
 */
 
-export const useGoogleLogin = (params: UseGoogleLoginParams) => {
+const useGoogleLogin = (params) => {
   const {
     onSuccess = () => {},
     onAutoLoadFinished = () => {},
@@ -99,7 +76,7 @@ export const useGoogleLogin = (params: UseGoogleLoginParams) => {
     return res;
   }
 
-  function click(e?: Event) {
+  function click(e) {
     if (e) {
       e.preventDefault(); // to prevent submit if used within form
     }
@@ -222,3 +199,5 @@ export const useGoogleLogin = (params: UseGoogleLoginParams) => {
 
   return { click, loaded };
 };
+
+export default useGoogleLogin;

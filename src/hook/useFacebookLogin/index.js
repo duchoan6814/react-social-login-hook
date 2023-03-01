@@ -1,42 +1,7 @@
-/* eslint-disable prefer-const */
-/* eslint-disable no-useless-escape */
 import { useState, useEffect } from "react";
-import { getParamsFromObject, decodeParamForKey } from "../lib/helper";
+import { getParamsFromObject, decodeParamForKey } from "../../lib/helper";
 
-type ResponseDataType = {
-  accessToken: string;
-  data_access_expiration_time: number;
-  expiresIn: number;
-  graphDomain: string;
-  id: string;
-  name: string;
-  signedRequest: string;
-  userID: string;
-};
-
-declare type Props = {
-  isDisabled?: boolean;
-  callback?: (data: ResponseDataType | { status: any }) => void;
-  appId: string;
-  xfbml?: boolean;
-  cookie?: boolean;
-  authType?: string;
-  scope?: string;
-  state?: string;
-  responseType?: string;
-  returnScopes?: boolean;
-  redirectUri?: string;
-  autoLoad?: boolean;
-  disableMobileRedirect?: boolean;
-  isMobile?: boolean;
-  fields?: string;
-  version?: string;
-  language?: string;
-  onClick?: (e?: Event) => void;
-  onFailure?: (error: any) => void;
-};
-
-export const useFacebookLogin = (props: Props) => {
+const useFacebookLogin = (props) => {
   const {
     autoLoad,
     appId,
@@ -155,7 +120,7 @@ export const useFacebookLogin = (props: Props) => {
     }
   };
 
-  const click = (e?: Event) => {
+  const click = (e) => {
     if (!isSdkLoaded || isProcessing || isDisabled) {
       return;
     }
@@ -219,3 +184,5 @@ export const useFacebookLogin = (props: Props) => {
     loaded: isSdkLoaded,
   };
 };
+
+export default useFacebookLogin;

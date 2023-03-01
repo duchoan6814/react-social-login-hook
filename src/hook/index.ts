@@ -1,3 +1,3 @@
-export { useGoogleLogin } from "./useGoogleLogin";
-export { useFacebookLogin } from "./useFacebookLogin";
-export { useAppleLogin } from "./useAppleLogin";
+export { default as useGoogleLogin } from "./useGoogleLogin";
+export { default as useFacebookLogin } from "./useFacebookLogin";
+export { default as useAppleLogin } from "./useAppleLogin";
