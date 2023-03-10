@@ -1,1 +1,1 @@
-export * from "./hook";
+export { useAppleLogin, useFacebookLogin, useGoogleLogin } from "./hook";

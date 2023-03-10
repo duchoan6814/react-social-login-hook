@@ -1,7 +1,10 @@
 {
-  "name": "social-login-hook",
-  "version": "1.0.0",
+  "name": "@duchoan6814/react-social-login-hook",
+  "version": "1.0.2",
   "description": "social-login-hook is a package that provides an easy-to-use React hook for implementing social login functionality in your application. The hook allows users to sign in with their Google, Apple, or Facebook accounts, providing a streamlined and secure authentication process.",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/hoantruong6814"
+  },
   "scripts": {
     "rollup": "rollup -c"
   },

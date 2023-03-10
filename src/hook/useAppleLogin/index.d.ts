@@ -1,6 +1,5 @@
-import { AppleLoginParams } from "../../types";
+import { UseAppleLoginType } from "../../types";
 
-declare const useAppleLogin: Function = (params: AppleLoginParams) =>
-  ReturnType;
+declare const useAppleLogin: UseAppleLoginType;
 
 export default useAppleLogin;

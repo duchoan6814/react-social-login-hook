@@ -1,32 +1,5 @@
 import { useState, useEffect } from "react";
-import { loadScript, removeScript } from "../../lib/helper";
-
-/**
-
-Hook to implement Google Authentication
-@param {Object} params - The parameters to configure the hook
-@param {function} params.onSuccess - The function to execute when authentication is successful
-@param {function} params.onAutoLoadFinished - The function to execute when the automatic loading of the Google API has finished
-@param {function} params.onFailure - The function to execute when authentication fails
-@param {function} params.onRequest - The function to execute when an authentication request is made
-@param {function} params.onScriptLoadFailure - The function to execute when the loading of the Google API script fails
-@param {string} params.clientId - The Google API client ID
-@param {string} [params.cookiePolicy] - The Google API cookie policy
-@param {string} [params.loginHint] - The Google API login hint
-@param {string} [params.hostedDomain] - The Google API hosted domain
-@param {boolean} [params.autoLoad=true] - Whether to automatically load the Google API on component mount
-@param {boolean} [params.isSignedIn=true] - Whether to check if the user is already signed in
-@param {boolean} [params.fetchBasicProfile=true] - Whether to fetch the user's basic profile information
-@param {string} [params.redirectUri] - The Google API redirect URI
-@param {string[]} [params.discoveryDocs] - The Google API discovery documents
-@param {string} [params.uxMode] - The Google API UX mode
-@param {string} [params.scope] - The Google API scope
-@param {string} [params.accessType] - The Google API access type
-@param {string} [params.responseType] - The Google API response type
-@param {string} [params.jsSrc="https://apis.google.com/js/api.js"] - The URL of the Google API script
-@param {string} [params.prompt] - The Google API prompt
-@returns {Object} - An object containing the click function to initiate authentication and a loaded flag indicating if the Google API has been loaded
-*/
+import { loadScript, removeScript } from "lib/helper";
 
 const useGoogleLogin = (params) => {
   const {

@@ -1,6 +1,5 @@
-import { UseGoogleLoginParams } from "../../types";
+import { UseGoogleLoginType } from "../../types";
 
-declare const useGoogleLogin: Function = (params: UseGoogleLoginParams) =>
-  ReturnType;
+declare const useGoogleLogin: UseGoogleLoginType;
 
 export default useGoogleLogin;

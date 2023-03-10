@@ -77,3 +77,22 @@ export interface FacebookLoginParams {
   onClick?: (e?: Event) => void;
   onFailure?: (error: any) => void;
 }
+
+export type ReturnType = {
+  loaded: boolean;
+  onLick: (e?: Event) => void;
+};
+
+declare interface UseGoogleLoginType extends Function {
+  (params: UseGoogleLoginParams): ReturnType;
+}
+
+declare interface UseAppleLoginType extends Function {
+  (params: AppleLoginParams): ReturnType;
+}
+
+declare interface UseFacebookLoginType extends Function {
+  (params: FacebookLoginParams): ReturnType;
+}
+
+export { UseGoogleLoginType, UseAppleLoginType, UseFacebookLoginType };

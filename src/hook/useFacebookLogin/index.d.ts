@@ -1,6 +1,5 @@
-import { FacebookLoginParams } from "../../types";
+import { UseFacebookLoginType } from "../../types";
 
-declare const useFacebookLogin: Function = (params: FacebookLoginParams) =>
-  ReturnType;
+declare const useFacebookLogin: UseFacebookLoginType;
 
 export default useFacebookLogin;
